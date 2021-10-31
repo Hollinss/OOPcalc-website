@@ -1,3 +1,4 @@
 # History of Internet 
-### F and Z Layouts are used
+### Welcome to the History of the Internet! 
+### Navigate to the website below hosted on Azure to explore the history!
 [Link to Website](http://historywebfandz.eastus.azurecontainer.io/)
