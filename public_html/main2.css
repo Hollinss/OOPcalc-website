@@ -15,9 +15,9 @@ body {
 }
 
 .div1 {
-    border-style: dashed;
-    border-width: thick;
-    border-color: darkslategrey;
+    background: url("banner.jpg");
+    background-position-y: 450px;
+    background-size: cover;
     grid-area: 1 / 1 / 2 / 6;
 }
 .div2 {
@@ -30,11 +30,15 @@ body {
 .div3 {
     grid-area: 2 / 4 / 4 / 6;
     background-color: #999999;
-    border-style: dashed;
-    border-width: thick;
-    background: url("public_html/oldcomp.jpg") center center;
-    background-size: cover;
-    padding: 200px;
+    border-style: solid;
+    border-width: thin;
+}
+
+.div305 {
+    grid-area: 4 / 4 / 6 / 6;
+    background-color: #999999;
+    border-style: solid;
+    border-width: thin;
 }
 .div4 {
     grid-area: 3 / 1 / 4 / 4;
@@ -45,20 +49,18 @@ body {
 }
 .div5 {
     grid-area: 4 / 1 / 5 / 6;
-    border-style: dashed;
-    border-width: thick;
-    border-color: darkslategrey;
-    background-color: burlywood;
 }
 
 .header1 {
+    color: white;
     padding: 5px;
+    margin-left: 10px;
 }
 
 .para {
     padding: 5px;
+    margin-left: 10px;
 }
-
 
 
 .logo img {
@@ -70,7 +72,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: burlywood;
+    background-color: saddlebrown;
 }
 
 .topnav a {
@@ -92,3 +94,19 @@ body {
     color: white;
 }
 
+#footer {
+    clear: both;
+    background-color: antiquewhite;
+}
+
+.licklider {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.licklider2 {
+    position: absolute;
+    top: 500px;
+    max-width: 400px;
+    max-height: 200px;
+}
