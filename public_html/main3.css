@@ -69,7 +69,8 @@ body {
 
 #footer {
     clear: both;
-    background-color: antiquewhite;
+    background-color: black;
+    color: white;
 }
 
 
@@ -82,7 +83,7 @@ body {
     float: right;
     color: #f2f2f2;
     text-align: center;
-    padding: 20px 16px;
+    padding: 20px 17px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -112,7 +113,7 @@ body {
 
 .contentimages {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-width: 100%;
+    max-width: 90%;
     max-height: auto;
 }
 .insidediv2 {
