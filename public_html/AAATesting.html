@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href = "main_calc.css" rel = "stylesheet">
+    <title>Important OOP Terms</title>
+</head>
+<body>
+
+<div class="topnav">
+    <div class="logo"><img src="logo.png" alt="website logo"> </div>
+    <a class="active" href="index.html">Home</a>
+    <a href="OOPGlossary.html">OOP Glossary</a>
+    <a href="OOPCalc.html">OOP in Calculator</a>
+    <a href="AAATesting.html">AAA Testing</a>
+    <a href="DesignPatterns.html">Design Patterns</a>
+</div>
+
+<div class = "hdiv">
+    <h1 class = "header1">AAA Testing</h1>
+    <h3 class = "header3"><i>This page contains a tutorial of AAA Testing in Python unit tests. Follow along to learn!</i></h3>
+</div>
+
+
+<div class="parent">
+
+    <div class="div1">
+        <img class = "licklider" src= "page2hero.jpg" alt = "History Timeline of Internet">
+    </div>
+    <div class="div2" style = "background-color: white">
+        <h3 style = "margin-top: 0px;"> Object Oriented Programming </h3>
+        <p>Also referred to as "OOP", this style of programming allows for developers to think of programs as "objects" as they appear in the real world. This enables an interaction between different created objects in a natural and flexible manner. Interaction between objects is seamless and debugging is made easier due to this style of design.<br>
+        <h3 style = "margin-top: 0px; "> Class </h3>
+        <p> A Class details the specifications/properties of an object in OOP. For instance, if we were to create and "class" of a cup in the real world, it may hold the properties of height, width, material etc.<br>
+        <h3 style = "margin-top: 0px; "> Object </h3>
+        <p> This is an instance of the created class at runtime<br>
+        <h3 style = "margin-top: 0px; "> Constructor </h3>
+        <p> A Constructor is an element within a class that creates an instance of the created object wherever necessary. If a developer wants to use an object within another file.<br>
+        <h3 style = "margin-top: 0px; "> Property </h3>
+        <p> A property within a class is an element which defines the data within the class. For instance, in JavaScript, if there were a class labeled "cup" and had properties "length, weight and material" it would look like this: </p>
+        <div style = "margin: 20px"> <code> class Cup { <br>
+            constructor( <br>
+            length,
+            width,
+            material <br>
+            ) { <br>
+            this.length = 5;
+            this.width = 3;
+            this.material = "porcelain"; <br>
+            } } <br>
+        </code> </div>
+        <h3 style = "margin-top: 0px; "> Interface </h3>
+        <p> An interface is a type which contains no implementation. It contains its own set of properties and methods which can be called upon by any class.  </p>
+        <h3 style = "margin-top: 0px; "> Static </h3>
+        <p> A static method is a method bound within the class definition of an object. In python, a static method is defined as <code>@staticmethod</code>. A static method can access all the static variables within the scope of the class.
+        <h3 style = "margin-top: 0px; "> Unit Test </h3>
+        <p> This is a software design testing method utilized to write efficient code. With unit tests, developers can test the functionality of their code periodically instead of writing their entire program and testing after the fact which may cause massive delays due to refactoring. Below is an example of a unit test written in python:</p>
+        <script src="https://gist.github.com/Hollinss/313678a97ca33e13644d5086275097d2.js"></script>
+        <p>In the above snippet, we are testing the addition capability of a calculator program. We assign values 2,1, and 30.5 to be added, and we are checking if the result will be 33.5 which proves the proper functioning of the calculator. The "Arrange", "Act", and "Assert" is a unit testing protocol for python tests. First, we arrange the sample values, next we act on the sample values, and finally, we assert the expected response from the act step.</p>
+        <h3 style = "margin-top: 0px; "> Namespace </h3>
+        <p> The system of maintaining different kinds of object within certain scopes is called namespace. In python, namespaces are maintained by a python dictionary. The more specific the namespace is named, the easier it is to identify objects and classes. <br>
+    </div>
+
+    <div class="div3" style = "background-color: white">
+
+        <h3 style = "margin-top: 0px;"> Superclass </h3>
+        <p> A superclass practices an OOP concept called "Inheritance" where classes are created in a hierarchy. A superclass implements the inheritance concept. A class that contains all the main constructor, and properties that can be "inherited" by it's subclasses.<br>
+        <h3 style = "margin-top: 0px; "> Subclass </h3>
+        <p> A Subclass can utilize properties listed and designed within the superclass. The subclass can modify the methods designed within the superclass, extending the functionality of the OOP object. There can be several subclasses which inherit from one superclass.<br>
+        <h3 style = "margin-top: 0px; "> Factory Method </h3>
+        <p> This is a type of method that creates a new instance of the class without the need to explicitly call the object for initialization. This method is typically localized within the Superclass. This design pattern tremendously eases the debugging of code related problems.<br>
+        <h3 style = "margin-top: 0px; "> Type Hint </h3>
+        <p> Type hinting is used to statically declare the type of variable within a python function. For instance, you can indicate a variable to be of type <code>string</code>, <code>integer</code>, <code>double</code> etc.</p>
+        <h3 style = "margin-top: 0px; "> Type Cast </h3>
+        <p>  Type casting is the practice of converting the type of a value to another user defined type. For instance, in the follwing example, an integer is type casted to a string variable: <code>x = str(1.9)</code>.</p>
+        <h3 style = "margin-top: 0px; "> Facade </h3>
+        <p> A Facade is a design pattern used in code where a program file delegates all of the functionality to different classes. It typically handles multiple objects and maintains the interactions between one another</p>
+
+    </div>
+</div>
+
+<footer id = footer>
+    Hollins Justin Jose &#169;
+    <a href = "https://github.com/Hollinss/internetwebsite" style="color: white;">Link to Repo</a>
+</footer>
+
+</body>
+</html>
