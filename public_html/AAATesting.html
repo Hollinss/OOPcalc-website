@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href = "main_calc.css" rel = "stylesheet">
-    <title>Important OOP Terms</title>
+    <title>AAA Testing</title>
 </head>
 <body>
 
@@ -48,8 +48,15 @@
         <p>Here, we call the <code>raises</code> functionality included in the pytest package to assert the <code>ZeroDivisionError</code> error also included in the pytest package.</p>
 
         <h1 style = "margin-top: 0px; color: olivedrab;"> Loading External Files to Test Functionality </h1>
-        <p> Similar to the multiplication class, this class loops through the tuple and divides each value. In addition, when a division by zero occurs, the program will throw an exception error which is picked up by the pytests we will go through in the next section.<br>
-
+        <p> The next step in scaling up our pytests is being able to load external files into our pytest framework. In order to do so, the file type of choice will be a csv (Comma Seperated Values) which is a file type where data is seperated by a comma delimiter. The Pandas library will be used to parse through csv files for this calculator program.<br>
+        <h3 style = "margin-top: 0px; "> Python Pandas </h3>
+        <p>Pandas makes file input manipulation easier by an object called <b>DataFrame</b>. We will load our data into this object and navigate to the necessary fragments. In addition, pandas offers intelligent data handling of missing data and flexible reshaping. <br> <br>As a prerequisite, you must create a file for each calculator operation with 3 columns. The first one holds "value_1", the second holds "value_2" and the last column holds the "result" of the calculation after it is passed into our calculator.</p>
+        <h3 style = "margin-top: 0px; "> Loading into a Dataframe </h3>
+        <p>Navigate to your additions test file, and ensure that your test function starts with the <code>test</code> keyword so that pycharm recognizes the fact that you are writing a test. Next, we will define a dataframe variable labelled <code>file</code> which performs the <code>read_csv</code> functionality from a relative path specified by us.</p>
+        <script src="https://gist.github.com/Hollinss/3e69dd154e025b9b6f62328993b9c0f5.js"></script>
+        <p>Next, we will iterate through the csv using a pandas tool called <code>iterrows</code> and pass into our calculator a tuple of values by each row.</p>
+        <script src="https://gist.github.com/Hollinss/48ee34c0371cf6ee4b63d539d45f3786.js"></script>
+        <p>Here, we specify which row's values we want to pass as values into our program in line 3 <code>row['value_1'], row['value_2']</code> and we <b>Act</b> upon these values in lines 5-7.</p>
         </div>
     </div>
 
