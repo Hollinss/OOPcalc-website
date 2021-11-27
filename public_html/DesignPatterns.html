@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href = "main3.css" rel = "stylesheet">
-    <title>Important OOP Terms</title>
+    <link href = "main_calc.css" rel = "stylesheet">
+    <title>Design Patterns in Calculator</title>
 </head>
 <body>
 
@@ -11,78 +11,48 @@
     <div class="logo"><img src="logo.png" alt="website logo"> </div>
     <a class="active" href="index.html">Home</a>
     <a href="OOPGlossary.html">OOP Glossary</a>
-    <a href="AAATesting.html">AAA Testing</a>
     <a href="OOPCalc.html">OOP in Calculator</a>
+    <a href="AAATesting.html">AAA Testing</a>
     <a href="DesignPatterns.html">Design Patterns</a>
 </div>
 
 <div class = "hdiv">
-    <h1 class = "header1">Design Patterns</h1>
-    <h3 class = "header3"><i>This page contains all the definitions of Design Pattern Practices in Python and a tutorial on the implementation of these practices in a calculator program!</i></h3>
+    <h1 class = "header1">Design Patterns in Calculator</h1>
+    <h3 class = "header3"><i>This page contains a walk-through of the calculator program in python and a study on how design pattern principles are exhibited in this program</i></h3>
 </div>
 
 
 <div class="parent">
 
-    <div class="div2">
-        <img class = "licklider" src= "page2hero.jpg" alt = "History Timeline of Internet">
+    <div class="div1">
+        <img class = "licklider" src= "pattern.jpg" alt = "History Timeline of Internet">
     </div>
+    <div class="div2" style = "background-color: white">
+        <br>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> Overview of Design Patterns </h1>
+        <p> To write readable and scalable code, we need to adhere to specific design patterns when writing code. In this calculator program, we employ several design pattern principles. The use of patters speeds up the development process by providing efficient code which assess problems before they even occur. Moreover, these patterns allow developers from different teams to communicate effectively as they share the same protocols.<br> <br> Creational design patters are effective since they help delegate tasks to specific classes which perform one operation each. Class-Creation patterns use inheritance effectively (similar to our calculator implementation) and Object-Creation patters are centered around delegation of objects for different tasks.
+        <h1 style = "margin-top: 0px; color: olivedrab;">  The Factory Method  </h1>
+        <img class="licklider" src="factory.jpg" alt="Factory Floor" style="margin-left: 0px;">
+        <p> This is a creational design pattern which enables users to create a family structure of objects which share similar properties. Think of a chocolate factory. In a chocolate factory, several products such as biscuits, chocolate bars, wafers, etc. can all be produced. In a way, they all inherit from the chocolate factory class because they all share the same base ingredient, Chocolate. In our calculator, the <code>Calculation</code> class contains our concrete factory method </p>
+        <script src="https://gist.github.com/Hollinss/4dd2f7cca80db331068d205415934969.js"></script>
 
-    <div class="div3" style = "background-color: white">
-        <h3 style = "margin-top: 0px;"> Object Oriented Programming </h3>
-        <p>Also referred to as "OOP", this style of programming allows for developers to think of programs as "objects" as they appear in the real world. This enables an interaction between different created objects in a natural and flexible manner. Interaction between objects is seamless and debugging is made easier due to this style of design.<br>
-        <h3 style = "margin-top: 0px; "> Class </h3>
-        <p> A Class details the specifications/properties of an object in OOP. For instance, if we were to create and "class" of a cup in the real world, it may hold the properties of height, width, material etc.<br>
-        <h3 style = "margin-top: 0px; "> Object </h3>
-        <p> This is an instance of the created class at runtime<br>
-        <h3 style = "margin-top: 0px; "> Constructor </h3>
-        <p> A Constructor is an element within a class that creates an instance of the created object wherever necessary. If a developer wants to use an object within another file.<br>
-        <h3 style = "margin-top: 0px; "> Property </h3>
-        <p> A property within a class is an element which defines the data within the class. For instance, in JavaScript, if there were a class labeled "cup" and had properties "length, weight and material" it would look like this: </p>
-        <div style = "margin: 20px"> <code> class Cup { <br>
-            constructor( <br>
-            length,
-            width,
-            material <br>
-            ) { <br>
-            this.length = 5;
-            this.width = 3;
-            this.material = "porcelain"; <br>
-            } } <br>
-        </code> </div>
-        <h3 style = "margin-top: 0px; "> Interface </h3>
-        <p> An interface is a type which contains no implementation. It contains its own set of properties and methods which can be called upon by any class.  </p>
-    </div>
+        <p>Here, from lines 8-11, we define our factory method which creates a Calculation object each time it is called by our Addition, Subtraction, Multiplication, and Division classes. The class method variable is set to the tuple of values that are passed into the factory method.</p>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> The Facade </h1>
+        <img class="licklider" src="facade.jpg" alt="Castle Front" style="margin-left: 0px; height: 400px; width: auto;">
+        <p>This pattern provides an interface to interact with complex sets of classes within your program. It enables users to access the inner workings of your program while hiding the complexity of the program. Sounds familiar? (Hint: <i>It's Abstraction</i>).<br>
+        <p>For our calculator, we create a python file called <code>calculator.py</code> which handles all of the complex operations such as initialization, keeping track of dependencies, method execution etc. Think of this class as the buttons on a calculator which we can access without being concerned about the inner workings of that same calculator. This practice is especially useful when we want to expand our program to perform more functions. In sort, the facade class connects the user to the calculator program with minimal interaction.</p>
+        <script src="https://gist.github.com/Hollinss/b2bda4e91528b3f6b5a003a5ce3056a7.js"></script>
+        <p>Here, we import the Calculations class which is an additional facade class which performs the calculations AND adds them to the histoy array. Let's analyze the add_numbers static method. This method takes in arguments from the user, a list of numbers and puts them into an immutable datatype called a tuple. Then, it calls the <code>addition_calculation</code> method from within the Calculations class to perform the necessary addition. Then, once the addition is successfully performed, per this method:</p>
+        <script src="https://gist.github.com/Hollinss/97555ea53429409b16675e5ea796bd83.js"></script>
+        <p>the method outputs <code>True</code>.</p>
 
-    <div class="div4" style = "background-color: white">
 
-        <h3 style = "margin-top: 0px;"> Superclass </h3>
-        <p> A superclass practices an OOP concept called "Inheritance" where classes are created in a hierarchy. A superclass implements the inheritance concept. A class that contains all the main constructor, and properties that can be "inherited" by it's subclasses.<br>
-        <h3 style = "margin-top: 0px; "> Subclass </h3>
-        <p> A Subclass can utilize properties listed and designed within the superclass. The subclass can modify the methods designed within the superclass, extending the functionality of the OOP object. There can be several subclasses which inherit from one superclass.<br>
-        <h3 style = "margin-top: 0px; "> Factory Method </h3>
-        <p> This is a type of method that creates a new instance of the class without the need to explicitly call the object for initialization. This method is typically localized within the Superclass. This design pattern tremendously eases the debugging of code related problems.<br>
-        <h3 style = "margin-top: 0px; "> Type Hint </h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor eius, enim eos est eum harum hic temporibus totam voluptatibus?
-        <h3 style = "margin-top: 0px; "> Type Cast </h3>
-        <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus modi nisi pariatur perferendis, porro praesentium quae quidem. Beatae culpa doloremque, ea esse iste nihil, possimus quibusdam repellendus rerum, similique totam.
-        <h3 style = "margin-top: 0px; "> Facade </h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam cum debitis eaque enim fugiat ipsa natus, quod rem tempora.
-        <h3 style = "margin-top: 0px; "> Static </h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet distinctio earum enim eum id in odio qui quos, suscipit vitae!
-        <h3 style = "margin-top: 0px; "> Unit Test </h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet distinctio earum enim eum id in odio qui quos, suscipit vitae!
-        <h3 style = "margin-top: 0px; "> Static </h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet distinctio earum enim eum id in odio qui quos, suscipit vitae!
     </div>
 </div>
 
-
-<a href = "https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Finternethist.eastus.azurecontainer.io%2Fpage2.html"> Link to W3C Validator </a>
-
 <footer id = footer>
     Hollins Justin Jose &#169;
-    <a href = "https://github.com/Hollinss/internetwebsite" style="color: white;">Link to Repo</a>
+    <a href = "https://github.com/Hollinss/calc-homework/tree/calc_part_5/tests" style="color: white;">Link to Repo</a>
 </footer>
 
 </body>
