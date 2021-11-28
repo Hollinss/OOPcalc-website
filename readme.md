@@ -4,5 +4,5 @@
 [Link to Website](http://pythoncalcwebsite.eastus.azurecontainer.io/index.html)
 
 # Below is a link to the repo containing the python calculator program
-[Link to Website](https://github.com/Hollinss/calc-homework/tree/calc_part_5)
+[Link to Repo](https://github.com/Hollinss/calc-homework/tree/calc_part_5)
 
