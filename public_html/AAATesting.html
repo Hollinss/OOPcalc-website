@@ -57,6 +57,10 @@
         <p>Next, we will iterate through the csv using a pandas tool called <code>iterrows</code> and pass into our calculator a tuple of values by each row.</p>
         <script src="https://gist.github.com/Hollinss/48ee34c0371cf6ee4b63d539d45f3786.js"></script>
         <p>Here, we specify which row's values we want to pass as values into our program in line 3 <code>row['value_1'], row['value_2']</code> and we <b>Act</b> upon these values in lines 5-7.</p>
+        <br>
+        <p>Now, for the division test, we perform the same pandas implementation as the addition test, but also we add the test for division by zero: </p>
+        <script src="https://gist.github.com/Hollinss/fb9e8890ac4dea9e69816edc6862c5f8.js"></script>
+        <p>Here, we load the csv dataframe into our file variable, and read through it using a loop. For each division operation, we test whether our calculator produces the correct results.</p>
         </div>
     </div>
 
